@@ -1270,7 +1270,7 @@ CREATE TABLE import_source (
   key_column character varying(64) NOT NULL,
   provider_class character varying(72) NOT NULL,
   import_state enum_sync_state NOT NULL DEFAULT 'unknown',
-  last_error_message character varying(255) NULL DEFAULT NULL,
+  last_error_message text NULL DEFAULT NULL,
   last_attempt timestamp with time zone NULL DEFAULT NULL,
   PRIMARY KEY (id)
 );
@@ -1422,7 +1422,7 @@ CREATE TABLE sync_rule (
   purge_existing enum_boolean NOT NULL DEFAULT 'n',
   filter_expression text DEFAULT NULL,
   sync_state enum_sync_state NOT NULL DEFAULT 'unknown',
-  last_error_message character varying(255) NULL DEFAULT NULL,
+  last_error_message text NULL DEFAULT NULL,
   last_attempt timestamp with time zone NULL DEFAULT NULL,
   PRIMARY KEY (id)
 );

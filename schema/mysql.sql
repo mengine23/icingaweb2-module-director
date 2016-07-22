@@ -1275,7 +1275,7 @@ CREATE TABLE sync_rule (
     'pending-changes',
     'failing'
   ) NOT NULL DEFAULT 'unknown',
-  last_error_message VARCHAR(255) DEFAULT NULL,
+  last_error_message TEXT DEFAULT NULL,
   last_attempt DATETIME DEFAULT NULL,
   PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
